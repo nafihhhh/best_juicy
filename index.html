@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Squeeze - Premium Juice Shop</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#4CAF50',secondary:'#FF9800'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=A%20vibrant%2C%20modern%20juice%20bar%20scene%20with%20fresh%20fruits%20scattered%20around%2C%20colorful%20juices%20in%20transparent%20glasses%2C%20bright%20natural%20lighting%2C%20clean%20white%20countertop%2C%20green%20plants%20in%20the%20background%2C%20minimalist%20aesthetic%2C%20professional%20food%20photography%20style%2C%20high-end%20commercial%20look&width=1920&height=1080&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-content {
+            background: linear-gradient(90deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+        }
+        input:focus {
+            outline: none;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .tab-active {
+            color: var(--tw-color-primary-DEFAULT);
+            border-bottom: 2px solid var(--tw-color-primary-DEFAULT);
+        }
+    </style>
+</head>
+<body class="bg-white min-h-screen">
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="#" class="text-3xl font-['Pacifico'] text-primary">logo</a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="font-medium text-gray-800 hover:text-primary transition-colors">Home</a>
+                <a href="#menu" class="font-medium text-gray-800 hover:text-primary transition-colors">Menu</a>
+                <a href="#about" class="font-medium text-gray-800 hover:text-primary transition-colors">About Us</a>
+                <a href="#contact" class="font-medium text-gray-800 hover:text-primary transition-colors">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="relative w-10 h-10 flex items-center justify-center cursor-pointer">
+                    <i class="ri-shopping-cart-2-line text-gray-800 ri-lg"></i>
+                    <span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">3</span>
+                </div>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line text-gray-800 ri-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section pt-24 min-h-[600px] flex items-center">
+        <div class="container mx-auto px-4 w-full">
+            <div class="hero-content max-w-xl py-16 px-8 rounded-lg">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Fresh & Natural Juices</h1>
+                <p class="text-lg text-gray-700 mb-8">Experience the taste of nature with our handcrafted premium juices made from 100% organic fruits.</p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-primary text-white px-6 py-3 font-medium !rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Order Now</button>
+                    <button class="bg-white border-2 border-primary text-primary px-6 py-3 font-medium !rounded-button hover:bg-primary hover:text-white transition-all whitespace-nowrap">View Menu</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Featured Juices</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover our most popular handcrafted juices, made fresh daily with premium ingredients.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20glass%20of%20vibrant%20green%20juice%20with%20kale%2C%20cucumber%2C%20apple%2C%20and%20celery%2C%20set%20against%20a%20clean%20white%20background%2C%20with%20fresh%20ingredients%20scattered%20around%2C%20professional%20food%20photography%2C%20bright%20and%20crisp%20lighting%2C%20commercial%20quality%20image&width=600&height=400&seq=2&orientation=landscape" alt="Green Detox Juice" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Green Detox</h3>
+                        <p class="text-gray-600 mb-4">A refreshing blend of kale, cucumber, apple, and celery to boost your immune system.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-primary">$8.99</span>
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20glass%20of%20bright%20orange%20carrot%20juice%20with%20ginger%20and%20turmeric%2C%20set%20against%20a%20clean%20white%20background%2C%20with%20fresh%20carrots%20and%20ginger%20root%20scattered%20around%2C%20professional%20food%20photography%2C%20bright%20and%20crisp%20lighting%2C%20commercial%20quality%20image&width=600&height=400&seq=3&orientation=landscape" alt="Carrot Ginger Juice" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Carrot Ginger</h3>
+                        <p class="text-gray-600 mb-4">A powerful blend of carrots, ginger, and turmeric to boost your immunity and energy.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-primary">$7.99</span>
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=A%20glass%20of%20vibrant%20red%20berry%20juice%20with%20strawberries%2C%20raspberries%2C%20and%20blueberries%2C%20set%20against%20a%20clean%20white%20background%2C%20with%20fresh%20berries%20scattered%20around%2C%20professional%20food%20photography%2C%20bright%20and%20crisp%20lighting%2C%20commercial%20quality%20image&width=600&height=400&seq=4&orientation=landscape" alt="Berry Blast Juice" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Berry Blast</h3>
+                        <p class="text-gray-600 mb-4">A sweet and tangy mix of strawberries, raspberries, and blueberries packed with antioxidants.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-primary">$9.49</span>
+                            <button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#menu" class="inline-block bg-white border-2 border-primary text-primary px-6 py-3 font-medium !rounded-button hover:bg-primary hover:text-white transition-all whitespace-nowrap">View All Juices</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose Our Juices?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We're committed to providing the highest quality juices using only the freshest ingredients.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="text-center p-6 rounded-lg bg-gray-50">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-leaf-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">100% Natural</h3>
+                    <p class="text-gray-600">Our juices are made from 100% natural ingredients with no added sugars or preservatives.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="text-center p-6 rounded-lg bg-gray-50">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-seedling-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Fresh Ingredients</h3>
+                    <p class="text-gray-600">We source only the freshest fruits and vegetables from local organic farms.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="text-center p-6 rounded-lg bg-gray-50">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-truck-line text-primary ri-2x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Same Day Delivery</h3>
+                    <p class="text-gray-600">Order before noon and get your fresh juices delivered to your doorstep the same day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-lg overflow-hidden">
+                    <img src="https://readdy.ai/api/search-image?query=A%20modern%20juice%20bar%20interior%20with%20staff%20preparing%20fresh%20juices%2C%20bright%20and%20airy%20space%20with%20natural%20light%2C%20green%20plants%2C%20wooden%20countertops%2C%20professional%20baristas%20in%20green%20aprons%2C%20high-end%20commercial%20photography%20style&width=600&height=600&seq=5&orientation=squarish" alt="About Our Juice Shop" class="w-full h-full object-cover">
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Story</h2>
+                    <p class="text-gray-600 mb-4">Founded in 2018, Fresh Squeeze began with a simple mission: to provide delicious, nutritious juices made from the freshest ingredients possible.</p>
+                    <p class="text-gray-600 mb-6">Our founder, Emily Chen, was frustrated by the lack of truly healthy juice options available. Most store-bought juices were filled with added sugars and preservatives. She decided to create a juice shop that would prioritize quality, nutrition, and taste above all else.</p>
+                    <p class="text-gray-600 mb-8">Today, we continue to handcraft each juice with care, using only organic fruits and vegetables sourced from local farms. We're proud to be a part of your health journey.</p>
+                    <button class="bg-primary text-white px-6 py-3 font-medium !rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Menu</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Explore our wide range of handcrafted juices, smoothies, and wellness shots.</p>
+            </div>
+            
+            <!-- Menu Tabs -->
+            <div class="flex justify-center mb-8 border-b overflow-x-auto whitespace-nowrap">
+                <button class="tab-active px-6 py-3 font-medium">All Juices</button>
+                <button class="px-6 py-3 font-medium text-gray-600 hover:text-primary">Green Juices</button>
+                <button class="px-6 py-3 font-medium text-gray-600 hover:text-primary">Fruit Juices</button>
+                <button class="px-6 py-3 font-medium text-gray-600 hover:text-primary">Smoothies</button>
+                <button class="px-6 py-3 font-medium text-gray-600 hover:text-primary">Wellness Shots</button>
+            </div>
+            
+            <!-- Menu Items Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-gray-50 rounded-lg p-6 flex gap-4">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="https://readdy.ai/api/search-image?query=A%20glass%20of%20vibrant%20green%20juice%20with%20kale%2C%20cucumber%2C%20apple%2C%20and%20celery%2C%20set%20against%20a%20clean%20white%20background%2C%20professional%20food%20photography%2C%20bright%20lighting&width=200&height=200&seq=6&orientation=squarish" alt="Green Detox" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">Green Detox</h3>
+                            <span class="text-primary font-bold">$8.99</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">Kale, cucumber, apple, celery</p>
+                        <button class="text-primary text-sm font-medium flex items-center">
+                            Add to cart <i class="ri-add-line ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="bg-gray-50 rounded-lg p-6 flex gap-4">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="https://readdy.ai/api/search-image?query=A%20glass%20of%20bright%20orange%20carrot%20juice%20with%20ginger%20and%20turmeric%2C%20set%20against%20a%20clean%20white%20background%2C%20professional%20food%20photography%2C%20bright%20lighting&width=200&height=200&seq=7&orientation=squarish" alt="Carrot Ginger" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">Carrot Ginger</h3>
+                            <span class="text-primary font-bold">$7.99</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">Carrot, ginger, turmeric, lemon</p>
+                        <button class="text-primary text-sm font-medium flex items-center">
+                            Add to cart <i class="ri-add-line ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 3 -->
+                <div class="bg-gray-50 rounded-lg p-6 flex gap-4">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="https://readdy.ai/api/search-image?query=A%20glass%20of%20vibrant%20red%20berry%20juice%20with%20strawberries%2C%20raspberries%2C%20and%20blueberries%2C%20set%20against%20a%20clean%20white%20background%2C%20professional%20food%20photography%2C%20bright%20lighting&width=200&height=200&seq=8&orientation=squarish" alt="Berry Blast" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">Berry Blast</h3>
+                            <span class="text-primary font-bold">$9.49</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">Strawberry, raspberry, blueberry, apple</p>
+                        <button class="text-primary text-sm font-medium flex items-center">
+                            Add to cart <i class="ri-add-line ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 4 -->
+                <div class="bg-gray-50 rounded-lg p-6 flex gap-4">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="https://readdy.ai/api/search-image?query=A%20glass%20of%20tropical%20pineapple%20juice%20with%20mango%20and%20coconut%2C%20set%20against%20a%20clean%20white%20background%2C%20professional%20food%20photography%2C%20bright%20lighting&width=200&height=200&seq=9&orientation=squarish" alt="Tropical Paradise" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">Tropical Paradise</h3>
+                            <span class="text-primary font-bold">$8.49</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">Pineapple, mango, coconut water</p>
+                        <button class="text-primary text-sm font-medium flex items-center">
+                            Add to cart <i class="ri-add-line ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 5 -->
+                <div class="bg-gray-50 rounded-lg p-6 flex gap-4">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="https://readdy.ai/api/search-image?query=A%20glass%20of%20purple%20beetroot%20juice%20with%20apple%20and%20ginger%2C%20set%20against%20a%20clean%20white%20background%2C%20professional%20food%20photography%2C%20bright%20lighting&width=200&height=200&seq=10&orientation=squarish" alt="Beetroot Cleanser" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">Beetroot Cleanser</h3>
+                            <span class="text-primary font-bold">$8.99</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">Beetroot, apple, ginger, lemon</p>
+                        <button class="text-primary text-sm font-medium flex items-center">
+                            Add to cart <i class="ri-add-line ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 6 -->
+                <div class="bg-gray-50 rounded-lg p-6 flex gap-4">
+                    <div class="w-20 h-20 rounded-full overflow-hidden flex-shrink-0">
+                        <img src="https://readdy.ai/api/search-image?query=A%20small%20shot%20glass%20of%20bright%20yellow%20ginger%20turmeric%20wellness%20shot%2C%20set%20against%20a%20clean%20white%20background%2C%20professional%20food%20photography%2C%20bright%20lighting&width=200&height=200&seq=11&orientation=squarish" alt="Immunity Shot" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">Immunity Shot</h3>
+                            <span class="text-primary font-bold">$4.99</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2">Ginger, turmeric, lemon, black pepper</p>
+                        <button class="text-primary text-sm font-medium flex items-center">
+                            Add to cart <i class="ri-add-line ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-primary text-white px-6 py-3 font-medium !rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">View Full Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Have questions or feedback? We'd love to hear from you!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Get in Touch</h3>
+                    
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary" placeholder="Your name">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary" placeholder="Your email">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary" placeholder="Your message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-primary text-white px-6 py-3 font-medium !rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap">Send Message</button>
+                    </form>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Visit Our Store</h3>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm mb-6">
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-map-pin-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Address</h4>
+                                <p class="text-gray-600">123 Juice Lane, Fresh District<br>San Francisco, CA 94103</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-time-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Opening Hours</h4>
+                                <p class="text-gray-600">Monday - Friday: 7:00 AM - 8:00 PM<br>Saturday - Sunday: 8:00 AM - 7:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center mr-4 mt-1">
+                                <i class="ri-phone-line text-primary ri-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Contact</h4>
+                                <p class="text-gray-600">Phone: (555) 123-4567<br>Email: hello@freshsqueeze.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rounded-lg overflow-hidden h-64 bg-gray-200">
+                        <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Store Location Map" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Column 1 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Fresh Squeeze</h3>
+                    <p class="text-gray-300 mb-6">Providing delicious, nutritious juices made from the freshest ingredients since 2018.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill ri-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-instagram-line ri-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-primary transition-colors">
+                            <i class="ri-twitter-x-line ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#menu" class="text-gray-300 hover:text-white transition-colors">Menu</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for updates, promotions, and health tips.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email address" class="px-4 py-2 w-full border-none text-gray-800 rounded-l focus:outline-none">
+                        <button type="submit" class="bg-primary px-4 py-2 !rounded-r-button whitespace-nowrap">Subscribe</button>
+                    </form>
+                    <div class="mt-6">
+                        <h4 class="font-bold mb-2">We Accept</h4>
+                        <div class="flex space-x-3">
+                            <div class="w-10 h-10 flex items-center justify-center">
+                                <i class="ri-visa-line ri-lg"></i>
+                            </div>
+                            <div class="w-10 h-10 flex items-center justify-center">
+                                <i class="ri-mastercard-line ri-lg"></i>
+                            </div>
+                            <div class="w-10 h-10 flex items-center justify-center">
+                                <i class="ri-paypal-line ri-lg"></i>
+                            </div>
+                            <div class="w-10 h-10 flex items-center justify-center">
+                                <i class="ri-apple-fill ri-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Fresh Squeeze. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const menuButton = document.querySelector('button.md\\:hidden');
+            const mobileNav = document.querySelector('nav');
+            
+            menuButton.addEventListener('click', function() {
+                mobileNav.classList.toggle('hidden');
+                mobileNav.classList.toggle('flex');
+                mobileNav.classList.toggle('flex-col');
+                mobileNav.classList.toggle('absolute');
+                mobileNav.classList.toggle('top-16');
+                mobileNav.classList.toggle('left-0');
+                mobileNav.classList.toggle('right-0');
+                mobileNav.classList.toggle('bg-white');
+                mobileNav.classList.toggle('shadow-md');
+                mobileNav.classList.toggle('p-4');
+                mobileNav.classList.toggle('z-50');
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menu tabs functionality
+            const tabButtons = document.querySelectorAll('.border-b button');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('text-gray-600');
+                    });
+                    
+                    // Add active class to clicked button
+                    this.classList.add('tab-active');
+                    this.classList.remove('text-gray-600');
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for navigation links
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
